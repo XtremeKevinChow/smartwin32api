@@ -1,0 +1,99 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2986B2BC-AB6F-428F-AF1E-A2BB49C173F1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartCore.Interop.Windows</RootNamespace>
+    <AssemblyName>SmartCore.Interop.Windows</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\ZO Library.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\SmartCore.Win32API.XML</DocumentationFile>
+    <BaseAddress>918487040</BaseAddress>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\SmartCore.Win32API.XML</DocumentationFile>
+    <BaseAddress>918487040</BaseAddress>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ForegroundIdle.cs" />
+    <Compile Include="ModuleHandle.cs" />
+    <Compile Include="WindowActivatingEventArgs.cs" />
+    <Compile Include="WindowHook.cs" />
+    <Compile Include="WindowHookCode.cs" />
+    <Compile Include="AssemblySupressMessage.cs" />
+    <Compile Include="ClassStyles.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="ExtendedWindowStyles.cs" />
+    <Compile Include="HookCode.cs" />
+    <Compile Include="HookHandle.cs" />
+    <Compile Include="HookProc.cs" />
+    <Compile Include="HookType.cs" />
+    <Compile Include="InstanceHandle.cs" />
+    <Compile Include="MessageBoxItem.cs" />
+    <Compile Include="POINT.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RECT.cs" />
+    <Compile Include="SafeNativeMethods.cs" />
+    <Compile Include="SIZE.cs" />
+    <Compile Include="UnsafeNativeMethods.cs" />
+    <Compile Include="Window.cs" />
+    <Compile Include="WindowHandle.cs" />
+    <Compile Include="WindowRelationship.cs" />
+    <Compile Include="BaseHook.cs" />
+    <Compile Include="WindowStyles.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\ZO Library.pfx">
+      <Link>ZO Library.pfx</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
