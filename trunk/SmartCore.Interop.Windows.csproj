@@ -21,7 +21,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>bin\SmartCore.Win32API.XML</DocumentationFile>
+    <DocumentationFile>bin\SmartCore.Interop.Windows.XML</DocumentationFile>
     <BaseAddress>918487040</BaseAddress>
     <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
@@ -33,7 +33,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>bin\SmartCore.Win32API.XML</DocumentationFile>
+    <DocumentationFile>bin\SmartCore.Interop.Windows.XML</DocumentationFile>
     <BaseAddress>918487040</BaseAddress>
   </PropertyGroup>
   <ItemGroup>
@@ -87,6 +87,12 @@
     <None Include="..\ZO Library.pfx">
       <Link>ZO Library.pfx</Link>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Smart Core Library\SmartCore.csproj">
+      <Project>{AB933C2B-7946-49BD-A9FB-09C5051EE95D}</Project>
+      <Name>SmartCore</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
